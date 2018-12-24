@@ -50,3 +50,16 @@ SpringBoot详细 原理加应用
     根据容器中是否存在某个bean来进行装配
     6.ConditionalOnMissingBean(name="user")
     当容器中不存在bean时才装配
+
+###  course4 课程4  Spring Boot @Enable*注解的工作原理
+    1.@EnableConfigurationProperties注解
+    用来启用一个特性的，这个特性就是，可以把配置文件的属性注入到bean里面去，和@ConfigurationProperties一起使用
+    
+    2.@EnableAsync启用异步，一般适合@Async一起使用
+    
+    3.@Enable的工作原理在于引入一个或者多个配置
+    @Enable中做重要的注解在于@import将Bean装配导入到spring容器，@Enable内部就是导入一个配置类
+    
+    4.@import用来导入一个或者多个类(bean会被Spring容器所托管)或者配置类(配置类中的bean都会被spring容器所托管)
+    
+    5.
