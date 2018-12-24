@@ -5,31 +5,38 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
- * SpringBootå…¥å£ç±»
+ * SpringBootÆô¶¯Àà
+ *
+ * @author huangsm
+ * @date
  */
 @SpringBootApplication
 public class Course1Application {
 
     /**
-     * å®šä¹‰ä¸€ä¸ªBean
+     * ¶¨ÒåÒ»¸öBean
+     *
      * @return
      */
     @Bean
     public Runnable createRunnable() {
         return () -> {
-            System.out.println("springboot is run");
-        };
+                   System.out.println("springboot is run");
+               };
     }
 
+    /**
+     * Method description
+     *
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(Course1Application.class, args);
+
         context.getBean(Runnable.class).run();
-
     }
-
 }
+
 

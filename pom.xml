@@ -23,6 +23,7 @@
 
     <modules>
         <module>course1</module>
+        <module>course2</module>
     </modules>
     <dependencies>
         <dependency>
@@ -35,6 +36,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.2</version>
+        </dependency>
+
     </dependencies>
 
     <build>
