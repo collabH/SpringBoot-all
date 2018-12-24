@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.env.EnvironmentPostProcessor;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -39,16 +40,22 @@ public class Course2Application {
      */
     @Value("${hello:nihao}")
     private String hello;
+
+    @Autowired
+    private TomcatProperties tomcatProperties;
+
     public static void main(String[] args) {
         SpringApplication.run(Course2Application.class, args);
     }
 
 
 
+
+
     @RequestMapping("/hello")
     public String hello(){
 
-        return env.getProperty("huel.name")+age+appName+hello+"huel"+huel;
+        return env.getProperty("huel.name")+age+appName+hello+"huel"+huel+tomcatProperties+env.getProperty("uu.name");
     }
 
 }

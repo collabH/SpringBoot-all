@@ -11,11 +11,27 @@ SpringBoot详细入门DEMO
 ### course2 课程2  SpringBoot配置分析    
     默认配置文件application.properties默认的位置在classpath根目录，或者是classpath/config目录下
     file:/，file:config/
-               也可以使用yaml格式,application.yml或者application.yaml我这里使用这种方式
+               也可以使用yaml格式,application.yml或者application.yaml
     application中是自定义参数，在Courese2Application用三种方式取得配置文件中的值
     1.@Value  Spring注解 默认值方式为${"hello:huangsm"}
     2.Environment   SpringBoot新特性，通过键值对的方式获取配置值      
     3.通过@ConfigurationProperties(prefix = "huel") 代码参考Huel实体类
+    
+    TomcatProperties支持集合和数组的注入
+    
+    2.动态的引入配置文件
+     自定义MyEnvironmentPostProcessor实现EnvironmentPostProcessor接口
+     
+    3.各个生产环境的切换---通过配置方式
+    #测试环境
+    spring.profiles.active=dev
+    
+    maven启动参数方式切换配置文件(表示启用多个)
+    --spring.profiles.active=dev,prod
+
+    4.根据不同环境注入不同的Bean 
+    详情查看MyConfig编码
+    @Profile注解在类上或者方法上使用，代表装配不同的Bean
      
     
     
