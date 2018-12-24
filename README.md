@@ -1,5 +1,5 @@
 # SpringBoot-all
-SpringBoot详细入门DEMO
+SpringBoot详细 原理加应用
 ### course1  课程一 SpringBoot快速入门
     https://start.spring.io/ Springboot项目快速构建网站
     
@@ -34,4 +34,19 @@ SpringBoot详细入门DEMO
     @Profile注解在类上或者方法上使用，代表装配不同的Bean
      
     
-    
+###  course3 课程3  SpringBoot自动配置
+
+    1.Condition接口   (用来自定义条件装配来使用)
+    其中有一个抽象方法matches，参数分别为ConditionContext context, AnnotatedTypeMetadata metadata
+    如何这个方法返回true表示可以自动装配，false表示不装配
+    2.Conditional注解 对接口的注解封装
+    基于条件的自动装配，一般配合Condition接口一起使用，只有接口实现类返回true，才装配，否则不装配，
+    他可以用在方法上，也可以用在类上。    
+    3. @ConditionalOnProperty(name="runable.enabled",havingValue = "true")
+    读取配置文件中的runable.enabled，为true该Bean装配，否则不装配
+    4. @ConditionalOnClass(name = "com.google.gson.Gson")
+    表示类路径下存在Gson这个包的时候才装配
+    5.@ConditionalOnBean(name = "user")
+    根据容器中是否存在某个bean来进行装配
+    6.ConditionalOnMissingBean(name="user")
+    当容器中不存在bean时才装配

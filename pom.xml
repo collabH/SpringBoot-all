@@ -24,6 +24,7 @@
     <modules>
         <module>course1</module>
         <module>course2</module>
+        <module>course3</module>
     </modules>
     <dependencies>
         <dependency>
@@ -40,6 +41,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.5</version>
         </dependency>
 
     </dependencies>

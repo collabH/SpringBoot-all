@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="course1" />
         <module name="course2" />
+        <module name="course3" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="course1" target="1.8" />
       <module name="course2" target="1.8" />
+      <module name="course3" target="1.8" />
       <module name="springboot" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -20,6 +22,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="course1" options="-parameters" />
       <module name="course2" options="-parameters" />
+      <module name="course3" options="-parameters" />
       <module name="springboot" options="-parameters" />
     </option>
   </component>
