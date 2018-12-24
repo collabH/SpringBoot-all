@@ -62,4 +62,10 @@ SpringBoot详细 原理加应用
     
     4.@import用来导入一个或者多个类(bean会被Spring容器所托管)或者配置类(配置类中的bean都会被spring容器所托管)
     
-    5.
+    5.ImportSelector
+    其中有一个selectImports方法，方法的返回值必须是一个class(全称),该class会被spring容器所托管起来
+    
+    6.ImportBeanDefinitionRegistrar
+    通过实现这个接口的registerBeanDefinitions方法，调用一下代码:
+     BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.rootBeanDefinition(User.class);
+     registry.registerBeanDefinition("user", beanDefinitionBuilder.getBeanDefinition());
