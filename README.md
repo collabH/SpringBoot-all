@@ -194,4 +194,13 @@ SpringBoot详细 原理加应用
 10. SpringBoot访问静态资源，可以将静态资源放在src/main/webapp下，springboot中将它放入static中，可以通过freemarker访问(详细看代码)，也可以直接访问
     `#修改默认静态页面路径`
    ` spring.resources.static-locations=classpath:/META-INF/resources/,classpath:/resources/static/,classpath:/static/,classpath:/public`
-11. 如何在SpringBoot中使用servlet,详细查看UserServlet类，需要使用@WebServlet("/user.do")表明路径，在启动类中开启对Servlet的扫描@ServletComponentScan
+11. 方式一:如何在SpringBoot中使用servlet,详细查看UserServlet类，需要使用@WebServlet("/user.do")表明路径，在启动类中开启对Servlet的扫描@ServletComponentScan
+12. 如何在SpringBoot中使用Filter，实现Filter接口，编写自己的业务逻辑，通过@WebFilter注解添加过滤规则(详细参考LogFilter代码)
+13. 如何在SpringBoot中使用Listener，实现ServletContextListener接口，实现他的俩个方法，通过@WebListener注解启动监听器
+14. 方式二:用配置类来使用Servlet、Filter、Listener（使用详细查看servlet包下代码）
+    `1.编写Servlet
+     2.装配相应的bean到spring容器中
+     servlet ->ServletRegistrationBean
+     filter ->FilterRegistrationBean
+     listener ->ServletListenerRegistrationBean
+    `
