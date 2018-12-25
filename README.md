@@ -180,4 +180,18 @@ SpringBoot详细 原理加应用
      22. 执行applicationContext的refresh方法，并且调用applicationContext的registerShutdownHook方法
      23. 回调，获取容器中所有的ApplicationRunner，CommandLineRunner接口，然后排序，依次调用
      24. 执行所有SpringApplicationRunnerListener的finished方法
-     
+    
+### course10 课程10 Spring Boot Web开发    
+1. 快速开发一个接口(参照代码)
+2. 修改默认端口号 修改配置文件server.port=8181
+3. @RequestParam默认参数必须提供，修改required可以不用提供值 @RequestParam(value = "name",required = false,defaultValue = "huangsm")
+4. @PathVariable获得路径中的值，参考代码
+5. @RestController返回Json格式给前台
+6. 整合JSP引入依赖tomcat-embed-jasper，配置spring.mvc.view.prefix=/WEB-INF/jsp/和spring.mvc.view.suffix=.jsp(详情参考JspController)
+7. 整合freemarker，引入spring-boot-starter-freemarker，ftl页面放在templates中(详细看代码，和配置文件)
+8. 配置访问默认前缀 server.servlet.context-path=/huangsm，默认为/
+9. 更换web容器，首先在spring-boot-starter-web排序spring-boot-starter-tomcat的依赖，在添加spring-boot-starter-jetty的依赖(这里就不测试了)
+10. SpringBoot访问静态资源，可以将静态资源放在src/main/webapp下，springboot中将它放入static中，可以通过freemarker访问(详细看代码)，也可以直接访问
+    `#修改默认静态页面路径`
+   ` spring.resources.static-locations=classpath:/META-INF/resources/,classpath:/resources/static/,classpath:/static/,classpath:/public`
+11. 如何在SpringBoot中使用servlet,详细查看UserServlet类，需要使用@WebServlet("/user.do")表明路径，在启动类中开启对Servlet的扫描@ServletComponentScan
