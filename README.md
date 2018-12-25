@@ -70,7 +70,7 @@ SpringBoot详细 原理加应用
      BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.rootBeanDefinition(User.class);
      registry.registerBeanDefinition("user", beanDefinitionBuilder.getBeanDefinition());
      
-###  course5 课程5 Spring Boot @EnableAutoConfiguration深入分析
+###  course5 课程5 Spring Boot @EnableAutoConfiguration深入分析(无代码偏理论和源码分析，可以仔细研究这个注解的源码)
     1.@EnableAutoConfigurationchong
     作用:从classpath中搜索所以META-INF/spring.factories配置文件，然后将其中
     org.springframework.boot.autoconfigure.EnableAutoConfiguration key对应的配置项加载到spring容器中
@@ -84,6 +84,19 @@ SpringBoot详细 原理加应用
     ImportSelector 该接口的方法返回值都会被纳入到Spring容器管理中
     SpringFactoriesLoader 该类可以从classpath中搜索所以META-INF/spring.factories配置文件，并读取配置
   
-### course6 课程6 Spring Boot 事件监听 --四种方式讲解如何配置事件监听  
-    
-    
+### course6 课程6 Spring Boot 事件监听 --四种方式讲解如何配置事件监听  (代码也放在course5中)
+**事件流程**
+1. 自定义事件，一般是继承ApplicationEvent抽象类
+2. 定义事件监听器，一般是实现ApplicationListener接口   
+3. 启动事件，需要把监听器加入到spring容器中   
+                    1.添加事件监听器app.addApplicationListener(new MyApplicationListener());
+                    2.使用@Component将事件监听器加入到spring容器中
+                    3.通过全局配置的方式context.listener.classes=com.springboot.study.course5.listener.MyApplicationListener
+                    4.自定义事件处理器，类似于代码中的MyEventHandle
+4. 发布事件     app.publishEvent(new MyApplicationEvent(new Object()));
+
+**源码分析**
+1. DelegatingApplicationListener，查看这个类，阅读源码，配置方式的源码
+2. EventListenerMethodProcessor，事件处理器方式源码，其核心实现根据@EventListener来处理监听事件
+
+### course7 课程7 Spring Boot 扩展分析
