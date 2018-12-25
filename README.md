@@ -89,10 +89,12 @@ SpringBoot详细 原理加应用
 1. 自定义事件，一般是继承ApplicationEvent抽象类
 2. 定义事件监听器，一般是实现ApplicationListener接口   
 3. 启动事件，需要把监听器加入到spring容器中   
-                    1. 添加事件监听器app.addApplicationListener(new MyApplicationListener());
-                    2. 使用@Component将事件监听器加入到spring容器中
-                    3. 通过全局配置的方式context.listener.classes=com.springboot.study.course5.listener.MyApplicationListener
-                    4. 自定义事件处理器，类似于代码中的MyEventHandle
+             
+ 		 1.添加事件监听器app.addApplicationListener(new MyApplicationListener());
+         2.使用@Component将事件监听器加入到spring容器中
+         3.通过全局配置的方式context.listener.classes=com.springboot.study.course5.listener.MyApplicationListener
+         4.自定义事件处理器，类似于代码中的MyEventHandle
+
 4. 发布事件     app.publishEvent(new MyApplicationEvent(new Object()));
 
 **源码分析**
@@ -117,9 +119,32 @@ SpringBoot详细 原理加应用
 
 通过@Order(param)来控制多个CommandLineRunner实现类的执行顺序，param参数数字最大，最早执行。
 3. CommandLineRunner，ApplicationRunner区别:
-    区别在于方法的参数不一样
-    CommandLineRunner的参数是最原始的参数，没有做任何处理
-    ApplicationRunner的参数是ApplicationArguments 是对原始参数进一步的封装
+  
+
+      区别在于方法的参数不一样
+        CommandLineRunner的参数是最原始的参数，没有做任何处理
+        ApplicationRunner的参数是ApplicationArguments 是对原始参数进一步的封装
+
 4. ApplicationArguments是对参数(main方法)进一步处理，可以解析--name=value的，我们可以通过name来获取value
         
-### course8 课程8 Spring Boot 补充讲解        
+### course8 课程8 Spring Boot 补充讲解
+**@SpringBootApplication**        
+        
+       默认扫描当前类已经子类下的所有包
+      1.@SpringBootApplication(exclude = ServerSuccessReport.class)
+      不扫描ServerSuccessReport这个类
+      2.@SpringBootApplication(excludeName = "com.springboot.study.course7.MyApplicationContextInitializer")
+      不扫描MyApplicationContextInitializer这个类
+      3.@SpringBootApplication(scanBasePackages = "com.springboot.study.course7")
+      扫描com.springboot.study.course7下的所有类
+      4.@SpringBootApplication(scanBasePackageClasses = MyApplicationContextInitializer.class)
+      扫描这个类
+**banner**
+1. 在resources添加自己的banner.txt替换系统的banner
+2. 也可以关闭banner
+3. 支持图片格式banner，支持jpg，png，gif
+4. 修改全局配置文件     
+    banner.location=my.txt
+    banner.charset=GBK
+    banner.image.location=my.jpg
+### course9 课程9 Spring Boot 运行流程分析      
