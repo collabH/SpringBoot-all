@@ -11,6 +11,7 @@
         <module name="course3" />
         <module name="course4" />
         <module name="course5" />
+        <module name="course7" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
       <module name="course3" target="1.8" />
       <module name="course4" target="1.8" />
       <module name="course5" target="1.8" />
+      <module name="course7" target="1.8" />
       <module name="springboot" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -29,6 +31,7 @@
       <module name="course3" options="-parameters" />
       <module name="course4" options="-parameters" />
       <module name="course5" options="-parameters" />
+      <module name="course7" options="-parameters" />
       <module name="springboot" options="-parameters" />
     </option>
   </component>

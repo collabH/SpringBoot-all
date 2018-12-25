@@ -89,10 +89,10 @@ SpringBoot详细 原理加应用
 1. 自定义事件，一般是继承ApplicationEvent抽象类
 2. 定义事件监听器，一般是实现ApplicationListener接口   
 3. 启动事件，需要把监听器加入到spring容器中   
-                    1.添加事件监听器app.addApplicationListener(new MyApplicationListener());
-                    2.使用@Component将事件监听器加入到spring容器中
-                    3.通过全局配置的方式context.listener.classes=com.springboot.study.course5.listener.MyApplicationListener
-                    4.自定义事件处理器，类似于代码中的MyEventHandle
+                    1. 添加事件监听器app.addApplicationListener(new MyApplicationListener());
+                    2. 使用@Component将事件监听器加入到spring容器中
+                    3. 通过全局配置的方式context.listener.classes=com.springboot.study.course5.listener.MyApplicationListener
+                    4. 自定义事件处理器，类似于代码中的MyEventHandle
 4. 发布事件     app.publishEvent(new MyApplicationEvent(new Object()));
 
 **源码分析**
@@ -100,3 +100,12 @@ SpringBoot详细 原理加应用
 2. EventListenerMethodProcessor，事件处理器方式源码，其核心实现根据@EventListener来处理监听事件
 
 ### course7 课程7 Spring Boot 扩展分析
+1.ApplicationContextInitializer 接口是在Spring容器执行refreshed之前的一个回调
+**使用步骤:**
+1. 写一个类，实现ApplicationContextInitializer接口
+2. 注册ApplicationContextInitializer
+
+**注册方法:**
+1. ApplicationContextInitializer.addInitializers
+2. 通过配置文件配置:context.initializer.classes指定,需要指定多个请看course7代码配置文件
+3. 通过METE/INF中的spring.factorties文件中指定

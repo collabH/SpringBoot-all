@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyEventHandle {
     /**
-     * 蚕食一定要是ApplicationEvent，或者其子类
+     * 参数一定要是ApplicationEvent，或者其子类
      *
      * @param event
      */
