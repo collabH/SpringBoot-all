@@ -69,3 +69,21 @@ SpringBoot详细 原理加应用
     通过实现这个接口的registerBeanDefinitions方法，调用一下代码:
      BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.rootBeanDefinition(User.class);
      registry.registerBeanDefinition("user", beanDefinitionBuilder.getBeanDefinition());
+     
+###  course5 课程5 Spring Boot @EnableAutoConfiguration深入分析
+    1.@EnableAutoConfigurationchong
+    作用:从classpath中搜索所以META-INF/spring.factories配置文件，然后将其中
+    org.springframework.boot.autoconfigure.EnableAutoConfiguration key对应的配置项加载到spring容器中
+    
+    只有org.springframework.boot.autoconfigure.EnableAutoConfiguration为true时才会生效，默认为true
+    @EnableAutoConfiguratio还可以进行排除:排除方式有俩种:1.通过class来排除
+                                                       2.根据类的名字来排除
+    
+    
+    2.其内部实现的关键点
+    ImportSelector 该接口的方法返回值都会被纳入到Spring容器管理中
+    SpringFactoriesLoader 该类可以从classpath中搜索所以META-INF/spring.factories配置文件，并读取配置
+  
+### course6 课程6 Spring Boot 事件监听 --四种方式讲解如何配置事件监听  
+    
+    

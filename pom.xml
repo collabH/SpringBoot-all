@@ -26,6 +26,7 @@
         <module>course2</module>
         <module>course3</module>
         <module>course4</module>
+        <module>course5</module>
     </modules>
     <dependencies>
         <dependency>
