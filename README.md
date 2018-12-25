@@ -1,3 +1,4 @@
+
 # SpringBoot-all
 SpringBoot详细 原理加应用
 ### course1  课程一 SpringBoot快速入门
@@ -155,7 +156,7 @@ SpringBoot详细 原理加应用
     第二种调用方式:
     SpringApplication.run(Course7Application.class, args);`
 2. 运行流程
-    `1. 判断是不是Web环境
+    1. 判断是不是Web环境
      2. 加载所有classpath下面的META-INF/spring.factorties ApplicationContextInitializer
      3. 加载所有classpath下面的META-INF/spring.factorties ApplicationListener
      4. 推断main方法所在的类
@@ -179,4 +180,4 @@ SpringBoot详细 原理加应用
      22. 执行applicationContext的refresh方法，并且调用applicationContext的registerShutdownHook方法
      23. 回调，获取容器中所有的ApplicationRunner，CommandLineRunner接口，然后排序，依次调用
      24. 执行所有SpringApplicationRunnerListener的finished方法
-     `    
+     
