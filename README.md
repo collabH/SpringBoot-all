@@ -99,7 +99,7 @@ SpringBoot详细 原理加应用
 1. DelegatingApplicationListener，查看这个类，阅读源码，配置方式的源码
 2. EventListenerMethodProcessor，事件处理器方式源码，其核心实现根据@EventListener来处理监听事件
 
-### course7 课程7 Spring Boot 扩展分析
+### course7 课程7 Spring Boot 扩展分析ApplicationContextInitializer、CommandLineRunner、ApplicationRunner、ApplicationArguments
 1.ApplicationContextInitializer 接口是在Spring容器执行refreshed之前的一个回调
 **使用步骤:**
 1. 写一个类，实现ApplicationContextInitializer接口
@@ -108,4 +108,18 @@ SpringBoot详细 原理加应用
 **注册方法:**
 1. ApplicationContextInitializer.addInitializers
 2. 通过配置文件配置:context.initializer.classes指定,需要指定多个请看course7代码配置文件
-3. 通过METE/INF中的spring.factorties文件中指定
+3. 通过METE/INF中的spring.factorties文件中指定(也可以注册监听器)
+
+2. CommandLineRunner是Spring容器启动成功后的最后一步回调 (步骤参考ServerSuccessReport代码)
+**使用步骤**
+1. 写一个类实现CommandLineRunner接口
+2. 通过@Component将它交给容器管理
+
+通过@Order(param)来控制多个CommandLineRunner实现类的执行顺序，param参数数字最大，最早执行。
+3. CommandLineRunner，ApplicationRunner区别:
+    区别在于方法的参数不一样
+    CommandLineRunner的参数是最原始的参数，没有做任何处理
+    ApplicationRunner的参数是ApplicationArguments 是对原始参数进一步的封装
+4. ApplicationArguments是对参数(main方法)进一步处理，可以解析--name=value的，我们可以通过name来获取value
+        
+### course8 课程8 Spring Boot 补充讲解        
