@@ -31,7 +31,7 @@ public class LogInterceptor implements HandlerInterceptor {
     }
 
     /**
-     * Controller执行之后，怯页面渲染之前调用
+     * Controller执行之后，页面渲染之前调用
      * @param request
      * @param response
      * @param handler
