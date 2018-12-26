@@ -12,6 +12,12 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>course19</name>
     <description>Demo project for Spring Boot</description>
-
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-x-discovery</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+    </dependencies>
 
 </project>

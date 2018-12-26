@@ -254,3 +254,7 @@ SpringBoot详细 原理加应用
 
 ### course18 课程18  Spring Boot 构建微服务实战  -一分钟配置一个Spring boot + Mybatis的微服务环境
 1. 参考代码
+
+### course19 课程19  Spring Boot 服务的注册和发现
+1. 这里使用的注册中心是zookeeper，使用的zookeeper客户端是curator(详细使用方法看course18和course19代码)
+2. 服务注册参考course18代码的register包下的ServiceRegister类
