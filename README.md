@@ -215,3 +215,10 @@ SpringBoot详细 原理加应用
          directory: G:\logs  存放日志的底单
      address: 192.168.12.60  规定只允许访问的ip`
 2. 编码方式定制tomcat容器，详情看tomcat包下TomcatCustomizer类
+
+### course12 课程12  Spring Boot JDBC --多种数据源的配置、JdbcTemplate、事务的处理
+1. 首先加入spring-boot-starter-jdbc依赖，然后Springboot自动装配DataSource，在全局配置文件中配置即可，详细参考(application.yml文件)
+2. SpringBoot会自动装配jdbcTemplate，可以直接使用。详细使用方式参考代码（TestDao）
+3. spring.datasource.type可以指定具体使用哪种数据源,默认支持tomcat-jdbc,Hikari,dbcp,dbcp2，首先排除默认数据源，然后在引入对应的数据源依赖及可以使用
+4. 自定义配置DataSource，首先引入依赖，然后创建DataSource配置类，装配一个数据源到spring容器中(详细代码参考DataSourceConfig代码，注意在application.yml文件中指定DataSource的类型)
+5. Springboot中开启事务，首先要使用@EnableTransactionManagement注解，启用对事务的支持，然后加上@Transactional(rollbackFor = Exception.class)对全部一次都进行事务回滚，他只能标注在spring容器管理的公用方法才会生效
