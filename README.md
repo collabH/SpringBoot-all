@@ -225,4 +225,13 @@ SpringBoot详细 原理加应用
 ### course13 课程13  Spring Boot AOP(面向切面编程)
 1. 添加spring-boot-starter-aop依赖，默认就开启了aop的支持，编写一个切面类(详细代码参考aop包下的Log类),@EnableAspectJAutoProxy //启用aop
 2. 是否启用aop 默认为true：spring.aop.auto=true，  false-jdk动态代理，true-cglib代理方式，默认为false:spring.aop.proxy-target-class=false，如果配置了false，切面的类没有接口依然使用cglib
-                   
+
+
+### course14 课程14 Spring Boot Starter  --快速构建自定义的Spring Boot Starter
+*自己开发一个spring boot starter的步骤*
+1. 新建一个maven项目
+2. 需要一个配置类，配置类里面需要装配好需要提供出去的类
+3. (1)使用Enable，配合@Import注解使用 (2)或者/META-INF/spring.factories             
+
+### course15 课程15 Spring Boot 日志--演示了如何在Spring Boot里面使用日志配置，以及logback，log4j2等日志的使用   
+   
