@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="course1" />
         <module name="course10" />
+        <module name="course11" />
         <module name="course2" />
         <module name="course3" />
         <module name="course4" />
@@ -18,6 +19,7 @@
     <bytecodeTargetLevel>
       <module name="course1" target="1.8" />
       <module name="course10" target="1.8" />
+      <module name="course11" target="1.8" />
       <module name="course2" target="1.8" />
       <module name="course3" target="1.8" />
       <module name="course4" target="1.8" />
@@ -30,6 +32,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="course1" options="-parameters" />
       <module name="course10" options="-parameters" />
+      <module name="course11" options="-parameters" />
       <module name="course2" options="-parameters" />
       <module name="course3" options="-parameters" />
       <module name="course4" options="-parameters" />

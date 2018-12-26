@@ -1,0 +1,7 @@
+#server:
+###  port: 9000
+###  tomcat:
+###    accesslog:
+###      enabled: true
+###      directory: G:\logs
+##  #address: 192.168.12.60

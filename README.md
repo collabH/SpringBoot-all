@@ -208,4 +208,10 @@ SpringBoot详细 原理加应用
 16. 配置错误页面跳转，首先排除springboot自带的错误处理页面@SpringBootApplication(exclude = ErrorMvcAutoConfiguration.class)，页面跳转处理逻辑参考exception包下的CommonErrorPageRegistry类
 17. 全局异常处理器(详细代码参考exception包下的GolbalExceptionHandler类)
 
-### course11 课程11 Spring Boot 定制和优化内嵌的Tomca    
+### course11 课程11 Spring Boot 定制和优化内嵌的Tomcat
+1.  `tomcat:   参数的使用
+       accesslog:
+         enabled: true 开启日志
+         directory: G:\logs  存放日志的底单
+     address: 192.168.12.60  规定只允许访问的ip`
+2. 编码方式定制tomcat容器，详情看tomcat包下TomcatCustomizer类
