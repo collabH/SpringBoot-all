@@ -222,3 +222,7 @@ SpringBoot详细 原理加应用
 3. spring.datasource.type可以指定具体使用哪种数据源,默认支持tomcat-jdbc,Hikari,dbcp,dbcp2，首先排除默认数据源，然后在引入对应的数据源依赖及可以使用
 4. 自定义配置DataSource，首先引入依赖，然后创建DataSource配置类，装配一个数据源到spring容器中(详细代码参考DataSourceConfig代码，注意在application.yml文件中指定DataSource的类型)
 5. Springboot中开启事务，首先要使用@EnableTransactionManagement注解，启用对事务的支持，然后加上@Transactional(rollbackFor = Exception.class)对全部一次都进行事务回滚，他只能标注在spring容器管理的公用方法才会生效
+### course13 课程13  Spring Boot AOP(面向切面编程)
+1. 添加spring-boot-starter-aop依赖，默认就开启了aop的支持，编写一个切面类(详细代码参考aop包下的Log类),@EnableAspectJAutoProxy //启用aop
+2. 是否启用aop 默认为true：spring.aop.auto=true，  false-jdk动态代理，true-cglib代理方式，默认为false:spring.aop.proxy-target-class=false，如果配置了false，切面的类没有接口依然使用cglib
+                   
