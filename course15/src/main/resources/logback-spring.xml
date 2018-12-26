@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+    <logger name="com.springboot.study.course15" level="DEBUG"/>
+
+    <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径 -->
+    <springProfile name="dev,test">
+        <property name="LOG_HOME" value="../../logbak" />
+        <property name="LOGLEVEL" value="INFO" />
+    </springProfile>
+
+    <springProfile name="pro">
+        <property name="LOG_HOME" value="../logs/logbak" />
+        <property name="LOGLEVEL" value="INFO" />
+    </springProfile>
+
+    <property name="AppName" value="springboot" />
+    <!-- 控制台输出 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread p表示线程名，%-5level p：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight(%-5level) %magenta(${PID:-}) - %green([%-21thread]) %cyan(%-35logger{30}) %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <!-- 设置分割 -->
+    <appender name="FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 设置按尺寸和时间（同时满足）分割 -->
+        <rollingPolicy
+                class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>${LOG_HOME}/${AppName}_%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread t表示线程名，%-5level p：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->
+            <pattern> %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level ${PID:-} [%-21thread] %-35logger{50}%msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <!-- 日志输出级别 -->
+    <root level="${LOGLEVEL}">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>

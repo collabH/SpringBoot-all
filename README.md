@@ -234,4 +234,9 @@ SpringBoot详细 原理加应用
 3. (1)使用Enable，配合@Import注解使用 (2)或者/META-INF/spring.factories             
 
 ### course15 课程15 Spring Boot 日志--演示了如何在Spring Boot里面使用日志配置，以及logback，log4j2等日志的使用   
-   
+1. logging.level.*=debug 修改日志信息级别 *可以是包也可以是类或者root
+2. 日志级别有:TRACE,DEBUG,INFO,ERROR,WARN,FATAL,OFF  OFF表示关闭日志输出
+3. logging.file=G:/logs/my.log 指定日志文件路径   logging.path=G:/logs制定日志目录(此时的日志名字为spring.log) 日志文件输出,文件大小10M之后就会分割了
+4. logging.pattern.console配置日志在控制台的输出格式logging.pattern.file配置日志在文件中的输出格式
+5. 在classpath下放一個logback.xml，logback-spring.xml的文件，即可控制日志文件的配置
+6. （1）使用其他日志组件步骤，排除掉默认的日志组件:spring-boot-starter-logging（2）加入新的日志路径依赖（3）把相应的配置文件放到classpath下

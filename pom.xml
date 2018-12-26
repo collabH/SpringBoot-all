@@ -33,6 +33,7 @@
         <module>course12</module>
         <module>course13</module>
         <module>course14</module>
+        <module>course15</module>
     </modules>
     <dependencies>
         <dependency>
