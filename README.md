@@ -258,3 +258,9 @@ SpringBoot详细 原理加应用
 ### course19 课程19  Spring Boot 服务的注册和发现
 1. 这里使用的注册中心是zookeeper，使用的zookeeper客户端是curator(详细使用方法看course18和course19代码)
 2. 服务注册参考course18代码的register包下的ServiceRegister类
+
+### course20 课程20  SpringBoot的部署与打包
+1. 打包mvn clean package
+2. 将jar包部署在服务器上
+3. java -jar  jar包名
+4. mvn clean package dependency:copy-dependencies
