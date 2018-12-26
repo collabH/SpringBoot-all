@@ -251,3 +251,6 @@ SpringBoot详细 原理加应用
 2. 测试环境下配置配置类，通过@TestConfiguration，在测试类上的加上@SpringBootTest(classes = TestBeanConfig.class)就可以导入配置类中的bean
 3. Mock测试方式，详细参考代码UserMapperTest类
 4. 测试controller第一种方式:参考UserControllerTest代码 第二种方式参考UserControllerTest2
+
+### course18 课程18  Spring Boot 构建微服务实战  -一分钟配置一个Spring boot + Mybatis的微服务环境
+1. 参考代码
