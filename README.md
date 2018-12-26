@@ -240,7 +240,14 @@ SpringBoot详细 原理加应用
 4. logging.pattern.console配置日志在控制台的输出格式logging.pattern.file配置日志在文件中的输出格式
 5. 在classpath下放一個logback.xml，logback-spring.xml的文件，即可控制日志文件的配置
 6. （1）使用其他日志组件步骤，排除掉默认的日志组件:spring-boot-starter-logging（2）加入新的日志路径依赖（3）把相应的配置文件放到classpath下
+
 ### course16 课程16 Spring Boot 监控和度量 --Spring Boot内置的监控点、自定义的监控状况检查、自定义度量统计，输出等等
 1. 添加spring-boot-starter-actuator依赖，并且在全局配置文件中开启management.endpoints.web.exposure.include=*，访问localhost:port/actuator就可以监控应用信息
 2. 可以在http://localhost:9000/actuator/info显示配置文件中以info开头的信息，会显示git.properties中的信息
 3. SpringBoot2.0监控点详情http://www.ityouknow.com/springboot/2018/02/06/spring-boot-actuator.html
+
+### course17 课程17 Spring Boot 测试  --实战演示在Spring Boot里面的测试案例，以及如何测试Controller
+1. Springboot测试步骤，直接在测试类上加如下俩个注解@RunWith(SpringRunner.class),@SpringBootTest
+2. 测试环境下配置配置类，通过@TestConfiguration，在测试类上的加上@SpringBootTest(classes = TestBeanConfig.class)就可以导入配置类中的bean
+3. Mock测试方式，详细参考代码UserMapperTest类
+4. 测试controller第一种方式:参考UserControllerTest代码 第二种方式参考UserControllerTest2
