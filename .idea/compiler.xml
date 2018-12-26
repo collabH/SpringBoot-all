@@ -16,6 +16,7 @@
         <module name="course16" />
         <module name="course17" />
         <module name="course18" />
+        <module name="course19" />
         <module name="course2" />
         <module name="course3" />
         <module name="course4" />
@@ -34,6 +35,7 @@
       <module name="course16" target="1.8" />
       <module name="course17" target="1.8" />
       <module name="course18" target="1.8" />
+      <module name="course19" target="1.8" />
       <module name="course2" target="1.8" />
       <module name="course3" target="1.8" />
       <module name="course4" target="1.8" />
@@ -54,6 +56,7 @@
       <module name="course16" options="-parameters" />
       <module name="course17" options="-parameters" />
       <module name="course18" options="-parameters" />
+      <module name="course19" options="-parameters" />
       <module name="course2" options="-parameters" />
       <module name="course3" options="-parameters" />
       <module name="course4" options="-parameters" />
