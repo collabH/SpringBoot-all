@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 public class HelloController {
     @GetMapping(value="/info")
     public String hello(){
+        System.out.println("我和拦截器谁快呢");
         return  "hello";
     }
 
@@ -47,4 +48,26 @@ public class HelloController {
     public String info3(HttpServletRequest request){
         return request.getRemoteHost();
     }
+
+    /**
+     * 测试全局异常捕获和页面跳转异常处理接口
+     * @return
+     */
+    @GetMapping(value="/ex")
+    public String ex() throws ClassNotFoundException {
+        throw new ClassNotFoundException("找不到类了");
+    }
+
+    @GetMapping(value="/ex1")
+    public String ex1() throws ClassNotFoundException {
+        throw new ClassNotFoundException("哈哈哈你又错了");
+    }
+    /**
+     * 处理ClassNotFoundException异常,只能处理当前controller中的异常
+     * @return
+     */
+   /* @ExceptionHandler(Exception.class)
+    public  String error(Exception e){
+        return e.getMessage();
+    }*/
 }

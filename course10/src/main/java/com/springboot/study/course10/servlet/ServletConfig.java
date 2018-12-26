@@ -12,7 +12,7 @@ import java.util.Arrays;
 /**
  * Servlet配置类
  */
-@SpringBootConfiguration
+//@SpringBootConfiguration
 public class ServletConfig {
     /**
      * 装配ServletRegistrationBean
