@@ -30,7 +30,7 @@ public class ServiceRegister implements ApplicationRunner {
         CuratorFramework client= CuratorFrameworkFactory.newClient(zkAddress, new RetryOneTime(1000));
         client.start();
         client.blockUntilConnected();
-        ServiceInstance<Object> instance = ServiceInstance.builder().name("testService").address("47.107.44.169").port(9000).build();
+        ServiceInstance<Object> instance = ServiceInstance.builder().name("info").address("47.107.44.169").port(9000).build();
         ServiceDiscovery<Object>serviceDiscovery= ServiceDiscoveryBuilder.
                 builder(Object.class).client(client).basePath("/soa").build();
         serviceDiscovery.registerService(instance);

@@ -38,6 +38,8 @@
         <module>course17</module>
         <module>course18</module>
         <module>course19</module>
+        <module>springboot-redis</module>
+        <module>springboot-rabbitMQ</module>
     </modules>
     <dependencies>
         <dependency>

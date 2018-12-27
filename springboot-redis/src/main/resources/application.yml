@@ -1,0 +1,19 @@
+spring:
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+      pool:
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1ms
+        max-active: 8
+    timeout: 1000
+    password:
+  mail:
+    host: smtp.qq.com
+    username: 1261109615@qq.com
+    password:
+    default-encoding: UTF-8
+fromMail: 1261109615@qq.com

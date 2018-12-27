@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$USER_HOME$/Desktop/springboot-rabbitMQ/springboot-rabbitMQ" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/course1" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/course1/src/main/java/com/springboot/study/course1/Course1Application.java" charset="GBK" />
@@ -19,5 +20,8 @@
     <file url="file://$PROJECT_DIR$/course4" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/course5" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/course7" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-rabbitMQ" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-redis/src/main/resources/application.yml" charset="GBK" />
   </component>
 </project>

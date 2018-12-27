@@ -19,6 +19,8 @@
       <module fileurl="file://$PROJECT_DIR$/course5/course5.iml" filepath="$PROJECT_DIR$/course5/course5.iml" />
       <module fileurl="file://$PROJECT_DIR$/course7/course7.iml" filepath="$PROJECT_DIR$/course7/course7.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot.iml" filepath="$PROJECT_DIR$/springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-rabbitMQ/springboot-rabbitMQ.iml" filepath="$PROJECT_DIR$/springboot-rabbitMQ/springboot-rabbitMQ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-redis/springboot-redis.iml" filepath="$PROJECT_DIR$/springboot-redis/springboot-redis.iml" />
     </modules>
   </component>
 </project>

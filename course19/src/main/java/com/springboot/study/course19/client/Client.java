@@ -23,10 +23,10 @@ public class Client {
         client.blockUntilConnected();
         ServiceDiscovery<Object> serviceDiscovery= ServiceDiscoveryBuilder.
                 builder(Object.class).client(client).basePath("/soa").build();
-        Collection<ServiceInstance<Object>> list = serviceDiscovery.queryForInstances("testService1");
+        Collection<ServiceInstance<Object>> list = serviceDiscovery.queryForInstances("info");
         list.forEach((instance)->{
             RestTemplate rs=new RestTemplate();
-            List<Test> forObject = rs.getForObject("http://" + instance.getAddress() + ":" + instance.getPort() + "/info", List.class);
+            List<Test> forObject = rs.getForObject("http://" + "localhost" + ":" + instance.getPort() + "/info", List.class);
             for (Test test : forObject) {
                 System.out.println(test);
             }

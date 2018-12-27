@@ -264,3 +264,29 @@ SpringBoot详细 原理加应用
 2. 将jar包部署在服务器上
 3. java -jar  jar包名
 4. mvn clean package dependency:copy-dependencies
+
+### Springboot整合应用
+1. SpringBoot整合redis(主要包括RedisConfig配置了Redis的俩种序列化方式，还有注入缓存管理器，controller包下测试缓存管理器，test包下测试redis的操作)
+2. 共享Session-spring-session-data-redis，分布式系统中，session共享有很多的解决方案，其中托管到缓存中应该是最常用的方案之一，
+   如何使用:引入依赖spring-session-data-redis，加入Session配置，详细看config中sessionConfig类，测试类在controller包下，登录redis 输入 keys '*sessions*'
+
+### RabbitMQ 
+RabbitMQ使用，RabbitMQ 即一个消息队列，主要是用来实现应用程序的异步和解耦，同时也能起到消息缓冲，消息分发的作用。
+*RabbitMQ介绍*
+`
+    RabbitMQ是实现AMQP（高级消息队列协议）的消息中间件的一种，最初起源于金融系统，
+用于在分布式系统中存储转发消息，在易用性、扩展性、高可用性等方面表现不俗。RabbitMQ
+主要是为了实现系统之间的双向解耦而实现的。当生产者大量产生数据时，消费者无法快速消费，
+那么需要一个中间层。保存这个数据。
+    AMQP，即Advanced Message Queuing Protocol，高级消息队列协议，是应用层协议的一个
+开放标准，为面向消息的中间件设计。消息中间件主要用于组件之间的解耦，消息的发送者无需知
+道消息使用者的存在，反之亦然。AMQP的主要特征是面向消息、队列、路由（包括点对点和发布/订阅）
+、可靠性、安全。
+    RabbitMQ是一个开源的AMQP实现，服务器端用Erlang语言编写，支持多种客户端，如：Python、Ruby、
+.NET、Java、JMS、C、PHP、ActionScript、XMPP、STOMP等，支持AJAX。用于在分布式系统中存储转发消息，
+ 在易用性、扩展性、高可用性等方面表现不俗。
+`
+1. RabbitMQ因为公司网络爆炸后，ip被百度云加速拉黑了，无法通过idea访问服务器上的rabbit管理器，甚至连一键构建Springboot项目都不行了，苦逼回去再测试
+
+### 邮件服务
+1. 邮件服务参考springboot-redis代码详情。
