@@ -5,5 +5,5 @@ spring:
     host: 47.107.44.169
     port: 15672
     username: hsm
-    password:
+    password: h199655
     virtual-host: /
