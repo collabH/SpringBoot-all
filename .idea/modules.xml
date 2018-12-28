@@ -21,6 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/springboot.iml" filepath="$PROJECT_DIR$/springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-rabbitMQ/springboot-rabbitMQ.iml" filepath="$PROJECT_DIR$/springboot-rabbitMQ/springboot-rabbitMQ.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-redis/springboot-redis.iml" filepath="$PROJECT_DIR$/springboot-redis/springboot-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-upload/springboot-upload.iml" filepath="$PROJECT_DIR$/springboot-upload/springboot-upload.iml" />
     </modules>
   </component>
 </project>
