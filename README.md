@@ -290,3 +290,6 @@ RabbitMQ使用，RabbitMQ 即一个消息队列，主要是用来实现应用程
 
 ### 邮件服务
 1. 邮件服务参考springboot-redis代码详情。
+
+### Springboot文件上传和文件下载
+1. 详细参考springboot-upload代码

@@ -22,6 +22,8 @@
         <option value="$PROJECT_DIR$/course19/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-redis/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-rabbitMQ/pom.xml" />
+        <option value="$USER_HOME$/Desktop/springboot-upload/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-upload/pom.xml" />
       </list>
     </option>
   </component>

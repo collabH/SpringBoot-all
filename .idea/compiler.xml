@@ -24,6 +24,7 @@
         <module name="course7" />
         <module name="springboot-rabbitMQ" />
         <module name="springboot-redis" />
+        <module name="springboot-upload" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -46,6 +47,7 @@
       <module name="springboot" target="1.8" />
       <module name="springboot-rabbitMQ" target="1.8" />
       <module name="springboot-redis" target="1.8" />
+      <module name="springboot-upload" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -69,6 +71,7 @@
       <module name="springboot" options="-parameters" />
       <module name="springboot-rabbitMQ" options="-parameters" />
       <module name="springboot-redis" options="-parameters" />
+      <module name="springboot-upload" options="-parameters" />
     </option>
   </component>
 </project>
