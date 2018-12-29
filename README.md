@@ -293,3 +293,8 @@ RabbitMQ使用，RabbitMQ 即一个消息队列，主要是用来实现应用程
 
 ### Springboot文件上传和文件下载
 1. 详细参考springboot-upload代码
+
+### Springboot整合Memcached
+1. 详细代码参考course19MemcachedRunner
+
+### 停止更新,2018/12/29
